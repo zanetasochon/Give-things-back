@@ -1,9 +1,12 @@
 @import "./scss/settings/variables";
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
   font-family: $font-base;
 }
+
+@import "./views/Signup/signup.scss";
+@import "./components/Navigation/navigation.scss";
