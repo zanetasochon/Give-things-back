@@ -1,0 +1,48 @@
+@import "/src/scss/settings/variables";
+
+.container {
+  padding-left: 13.9rem;
+  padding-right: 13.9rem;
+  padding-top: 3.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 26px;
+
+  .container__auth {
+    display: inherit;
+    gap: 20px;
+
+    .auth__button--nav {
+      text-decoration: none;
+      color: $color-secondary;
+      font-size: 1.4rem;
+      font-weight: 400;
+
+      &:hover {
+        border: 0.75px solid #fad648;
+        padding: 9px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .container--nav {
+    display: inherit;
+    gap: 55px;
+    font-weight: 400;
+    flex-wrap: wrap;
+
+    .button__nav {
+      text-decoration: none;
+      color: $color-primary;
+      font-size: 1.8rem;
+
+      &:hover {
+        border: 0.75px solid #fad648;
+        padding: 9px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
