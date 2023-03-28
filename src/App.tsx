@@ -1,20 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navigation } from "./components/Navigation/Navigation";
+import { useRoutes } from "react-router-dom";
 import { Dashboard } from "./views/Dashboard/Dashboard";
 import { Signin } from "./views/Signin/Signin";
 import { Signup } from "./views/Signup/Signup";
 
 const App = () => {
-  return (
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
-      </Routes>
-    </Router>
-  );
+  const routes = useRoutes([
+    {
+      path: "/",
+      element: <Dashboard />,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
+    },
+    {
+      path: "/signin",
+      element: <Signin />,
+    },
+  ]);
+  return routes;
 };
 
 export default App;

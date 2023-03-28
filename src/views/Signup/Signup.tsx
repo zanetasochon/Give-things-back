@@ -12,12 +12,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { getUser } from "../../store/slices/userSlice";
 import { useAppDispatch } from "../../store/hooks";
 import { signUpService } from "../../services/auth.service";
-
-interface IAuth {
-  email: string;
-  password: string;
-  confirmPassword: string;
-}
+import "../../types/user.types";
 
 const schema = yup
   .object({

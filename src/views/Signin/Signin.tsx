@@ -10,11 +10,7 @@ import { Container } from "@mui/material";
 import { signInService } from "../../services/auth.service";
 import { useAppDispatch } from "../../store/hooks";
 import { getUser } from "../../store/slices/userSlice";
-
-interface IAuth {
-  email: string;
-  password: string;
-}
+import "../../types/user.types";
 
 export const Signin = () => {
   const { control, handleSubmit } = useForm({
