@@ -7,25 +7,45 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useNavigate } from "react-router-dom";
 import { signInService } from "../../services/auth.service";
 import { useAppDispatch } from "../../store/hooks";
 import { getUser } from "../../store/slices/userSlice";
-import "../../types/user.types";
+import { IAuth } from "../../types/user.types";
+
+const schema = yup
+  .object({
+    email: yup.string().email().required("Please enter email"),
+    password: yup.string().required("Please enter password"),
+  })
+  .required();
 
 export const Signin = () => {
-  const { control, handleSubmit } = useForm({
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       email: "",
       password: "",
     },
+    resolver: yupResolver(schema),
   });
+
+  const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
 
   const onSubmit: SubmitHandler<IAuth> = async ({ email, password }: IAuth) => {
     try {
       const user = await signInService({ email, password });
-      dispatch(getUser({ id: user?.id, email: user?.email }));
+      if (user) {
+        dispatch(getUser({ id: user?.id, email: user?.email }));
+        navigate("/");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -76,7 +96,7 @@ export const Signin = () => {
           component="form"
           noValidate
           onSubmit={handleSubmit(onSubmit)}
-          sx={{ mt: "4rem", width: "25rem" }}
+          sx={{ mt: "1rem", width: "25rem" }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -88,13 +108,14 @@ export const Signin = () => {
                     variant="standard"
                     required
                     fullWidth
+                    helperText={errors.email?.message}
                     id="email"
                     label="Email"
                     name="email"
                     autoComplete="email"
                     onChange={onChange}
                     value={value}
-                    sx={{ marginBottom: "3.1rem" }}
+                    sx={{ marginBottom: "1.1rem" }}
                   />
                 )}
               />
@@ -107,6 +128,7 @@ export const Signin = () => {
                   <TextField
                     required
                     fullWidth
+                    helperText={errors.password?.message}
                     name="password"
                     label="Password"
                     type="password"
@@ -133,7 +155,8 @@ export const Signin = () => {
                 color: "inherit",
                 border: "none",
                 boxShadow: "none",
-                padding: "1.3rem 1.1rem",
+                padding: "0.3rem 0.2rem",
+                mt: "2rem",
                 "&:hover": {
                   border: "0.75px solid #3C3C3C",
                   background: "none",

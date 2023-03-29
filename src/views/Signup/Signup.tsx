@@ -18,7 +18,7 @@ const schema = yup
   .object({
     email: yup.string().required("Please enter email"),
     password: yup.string().required("Please enter password"),
-    passwordConfirmation: yup
+    confirmPassword: yup
       .string()
       .oneOf([yup.ref("password"), undefined], "Passwords must match"),
   })
@@ -94,7 +94,7 @@ export const Signup = () => {
           component="form"
           noValidate
           onSubmit={handleSubmit(onSubmit)}
-          sx={{ mt: "4rem", width: "25rem" }}
+          sx={{ mt: "1rem", width: "25rem" }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -113,6 +113,7 @@ export const Signup = () => {
                     helperText={errors.email?.message}
                     onChange={onChange}
                     value={value}
+                    sx={{ marginBottom: "1.1rem" }}
                   />
                 )}
               />
@@ -134,6 +135,7 @@ export const Signup = () => {
                     helperText={errors.password?.message}
                     value={value}
                     variant="standard"
+                    sx={{ marginBottom: "1.1rem" }}
                   />
                 )}
               />
@@ -155,6 +157,7 @@ export const Signup = () => {
                     helperText={errors.confirmPassword?.message}
                     value={value}
                     variant="standard"
+                    sx={{ marginBottom: "1.1rem" }}
                   />
                 )}
               />
@@ -170,7 +173,8 @@ export const Signup = () => {
                 color: "inherit",
                 border: "none",
                 boxShadow: "none",
-                padding: "1.3rem 1.1rem",
+                padding: "0.3rem 0.2rem",
+                mt: "2rem",
                 "&:hover": {
                   border: "0.75px solid #3C3C3C",
                   background: "none",
@@ -202,7 +206,7 @@ export const Signup = () => {
               fontSize: "1.8rem",
               textDecoration: "none",
               color: "#000",
-              padding: "0",
+              padding: "1.3rem 1.2rem",
               "&:hover": {
                 border: "0.75px solid #3C3C3C",
               },
