@@ -10,6 +10,7 @@ import { Dashboard } from "./views/Dashboard/Dashboard";
 import { Signin } from "./views/Signin/Signin";
 import { Signup } from "./views/Signup/Signup";
 import { Logout } from "./views/Logout/Logout";
+import { DonateThings } from "./views/DonateThings/DonateThings";
 
 export const AppRoutes = () => {
   const routes = useRoutes([
@@ -58,6 +59,10 @@ export const AppRoutes = () => {
     {
       path: "/logout",
       element: <Logout />,
+    },
+    {
+      path: "/donateThings",
+      element: <DonateThings />,
     },
   ]);
   return routes;
