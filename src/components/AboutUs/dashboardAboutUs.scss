@@ -1,0 +1,39 @@
+.container__aboutUs {
+  height: 93.5rem;
+  display: flex;
+  .aboutUs__text {
+    width: 95.8rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light-gray;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .header__aboutUs {
+      font-weight: 400;
+      font-size: 3.8rem;
+      color: $color-primary;
+      margin-bottom: 3.996rem;
+    }
+    .decor {
+      margin-bottom: 6.19rem;
+    }
+    .description__aboutUs {
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: -0.6;
+      color: $color-primary;
+      width: 65.69rem;
+      margin-bottom: 4.009rem;
+    }
+    .signature__container {
+      width: 65.69rem;
+      text-align: end;
+    }
+  }
+  .people__photo {
+    width: 94.2rem;
+    height: 93.5rem;
+  }
+}
