@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import * as Scroll from "react-scroll";
 import decoration from "../../assets/Decoration.png";
 import pullover from "../../assets/Icon.png";
 import arrow from "../../assets/Icon-arrow.png";
@@ -7,12 +8,14 @@ import loop from "../../assets/Icon-loop.png";
 
 export const DashboardFourSteps = () => {
   const navigate = useNavigate();
+  const { Element } = Scroll;
 
   const handleClickToDonateThing = () => {
     navigate("/donateThings");
   };
   return (
     <section className="container__four--steps">
+      <Element name="elementFourSteps" />
       <div className="header__text--section">
         <h1 className="title__four--steps">Just 4 simple steps</h1>
         <img className="decoration" src={decoration} alt="decoration" />
