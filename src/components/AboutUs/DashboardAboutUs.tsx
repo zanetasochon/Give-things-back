@@ -1,10 +1,13 @@
+import * as Scroll from "react-scroll";
 import decoration from "../../assets/Decoration.png";
 import signature from "../../assets/Signature.svg";
 import people from "../../assets/People.png";
 
 export const DashboardAboutUs = () => {
+  const { Element } = Scroll;
   return (
     <section className="container__aboutUs">
+      <Element name="elementAboutUs" />
       <div className="aboutUs__text">
         <h3 className="header__aboutUs">About Us</h3>
         <img className="decor" src={decoration} alt="decoration" />
