@@ -9,10 +9,11 @@ import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useNavigate } from "react-router-dom";
 import { getUser } from "../../store/slices/userSlice";
 import { useAppDispatch } from "../../store/hooks";
 import { signUpService } from "../../services/auth.service";
-import "../../types/user.types";
+import { IAuth } from "../../types/user.types";
 
 const schema = yup
   .object({
@@ -37,6 +38,7 @@ export const Signup = () => {
     },
     resolver: yupResolver(schema),
   });
+  const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
 
@@ -44,6 +46,7 @@ export const Signup = () => {
     try {
       const user = await signUpService({ email, password });
       dispatch(getUser({ id: user?.id, email: user?.email }));
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
