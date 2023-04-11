@@ -5,14 +5,12 @@ import pullover from "../../assets/Icon.png";
 import arrow from "../../assets/Icon-arrow.png";
 import glass from "../../assets/Icon-glass.png";
 import loop from "../../assets/Icon-loop.png";
+import { useRoutesIfNoLog } from "../../hooks/hooks";
 
 export const DashboardFourSteps = () => {
-  const navigate = useNavigate();
   const { Element } = Scroll;
+  const { navigateIfNoLog } = useRoutesIfNoLog();
 
-  const handleClickToDonateThing = () => {
-    navigate("/donateThings");
-  };
   return (
     <section className="container__four--steps">
       <Element name="elementFourSteps" />
@@ -44,7 +42,7 @@ export const DashboardFourSteps = () => {
       </div>
       <div className="container__button">
         <button
-          onClick={handleClickToDonateThing}
+          onClick={navigateIfNoLog}
           className="button__give--things"
           type="button"
         >
