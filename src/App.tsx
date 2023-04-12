@@ -1,24 +1,32 @@
-import { useRoutes } from "react-router-dom";
-import { Dashboard } from "./views/Dashboard/Dashboard";
-import { Signin } from "./views/Signin/Signin";
-import { Signup } from "./views/Signup/Signup";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { AppRoutes } from "./AppRoutes";
+import { useAppDispatch } from "./store/hooks";
+import {
+  checkIfUserExistsInLocalStorage,
+  getUserFromLocalStorage,
+} from "./utils/user.utils";
+import { getUser } from "./store/slices/userSlice";
 
 const App = () => {
-  const routes = useRoutes([
-    {
-      path: "/",
-      element: <Dashboard />,
-    },
-    {
-      path: "/signup",
-      element: <Signup />,
-    },
-    {
-      path: "/signin",
-      element: <Signin />,
-    },
-  ]);
-  return routes;
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const getData = () => {
+    const bool = checkIfUserExistsInLocalStorage();
+    if (!bool) {
+      navigate("/signin");
+    } else {
+      const user = getUserFromLocalStorage();
+      dispatch(getUser({ id: user?.id!, email: user?.email! }));
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return <AppRoutes />;
 };
 
 export default App;

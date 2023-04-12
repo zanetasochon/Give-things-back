@@ -29,9 +29,17 @@ export const userSlice = createSlice({
         },
       };
     },
+    signOutUserAction: (state, action) => {
+      return {
+        user: {
+          id: action.payload.id,
+          email: action.payload.email,
+        },
+      };
+    },
   },
 });
 
-export const selectUser = (state: RootState) => state.rootReducer.user;
+export const selectUser = (state: RootState) => state.rootReducer.user.user;
 
-export const { getUser } = userSlice.actions;
+export const { getUser, signOutUserAction } = userSlice.actions;

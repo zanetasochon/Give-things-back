@@ -1,0 +1,71 @@
+.main {
+  display: flex;
+  height: 890px;
+
+  .container__hero {
+    width: 50%;
+    .hero {
+      width: 136.8rem;
+      height: 96.3rem;
+      position: relative;
+      top: -73px;
+      left: -48.3rem;
+    }
+  }
+  .text__container {
+    width: 50%;
+    height: 83.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    position: relative;
+    .text__wrapper {
+      width: 67.4rem;
+      height: 35rem;
+      text-align: center;
+      .header {
+        font-family: $font-base;
+        font-weight: 400;
+        font-size: 3.8rem;
+        text-align: center;
+      }
+      .second__text--header {
+        padding-bottom: 2.5rem;
+      }
+      .decoration {
+        margin-bottom: 0.78rem;
+      }
+      .buttons {
+        display: flex;
+
+        .button {
+          font-family: $font-base;
+          font-weight: 300;
+          font-size: 3.6rem;
+          background: none;
+          color: inherit;
+          border: none;
+          box-shadow: none;
+          padding: 0.3rem 0.2rem;
+          border: 0.75px solid #3c3c3c;
+
+          &:hover {
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            cursor: pointer;
+          }
+        }
+        .give__things {
+          padding: 1.3rem 9.3rem;
+        }
+        .organize__collection {
+          padding: 1.3rem 5.1rem;
+          margin-left: 4.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.whatWeHelp__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 27.8rem;
+  margin-right: 27.8rem;
+
+  .whoWeHelp__header {
+    margin-top: 7rem;
+    font-weight: 400;
+    color: $color-primary;
+    font-size: 3.8rem;
+    margin-bottom: 3.896rem;
+  }
+  .decoration {
+    margin-bottom: 6.89rem;
+  }
+  .buttons__help {
+    display: flex;
+    gap: 5.4rem;
+    margin-bottom: 8rem;
+    .whoWeHelp__button {
+      font-family: $font-base;
+      font-weight: 300;
+      font-size: 2.4rem;
+      background: none;
+      color: $color-primary;
+      border: none;
+      box-shadow: none;
+      padding: 4.2rem 2.3rem;
+
+      &:hover {
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: 0.75px solid $color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+  .description__text {
+    width: 64rem;
+    height: 9.4rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: $color-primary;
+    margin-bottom: 6.6rem;
+  }
+  .fundation {
+    width: 134.4rem;
+    position: relative;
+    .name__of--foundation {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 2.6rem;
+      color: $color-primary;
+      font-family: $font-alt;
+      font-weight: 300;
+      padding-top: 3.4rem;
+    }
+    .goal {
+      font-family: inherit;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: $color-primary;
+      margin-bottom: 3.1rem;
+    }
+    .need__stuff {
+      display: flex;
+      justify-content: flex-end;
+      vertical-align: middle;
+      position: absolute;
+      left: 80%;
+      transform: translate(0, -320%);
+    }
+  }
+  .middle__section {
+    border-top: 0.75px solid $color-primary;
+    border-bottom: 0.75px solid $color-primary;
+  }
+
+  .page__button {
+    font-family: $font-base;
+    font-weight: 400;
+    font-size: 1.8rem;
+    background: none;
+    color: $color-primary;
+    border: none;
+    box-shadow: none;
+    padding: 1.5rem 1.3rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+
+    &:hover {
+      background: none;
+      box-shadow: none;
+      border-radius: 0;
+      border: 0.75px solid $color-primary;
+      cursor: pointer;
+    }
+  }
+}

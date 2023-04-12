@@ -1,0 +1,69 @@
+.container__four--steps {
+  .header__text--section {
+    height: 19.9rem;
+    text-align: center;
+    .title__four--steps {
+      font-size: 3.8rem;
+      font-weight: 400;
+      color: $color-primary;
+      padding-top: 5.5rem;
+      padding-bottom: 3.896rem;
+    }
+    .decoration {
+      margin-bottom: 3.526rem;
+    }
+  }
+  .instructions__container--section {
+    height: 32.5rem;
+    background-color: #f0f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17.2rem;
+    text-align: center;
+
+    .instructions__container {
+      width: 13.4rem;
+      height: 17.8rem;
+      .instruction {
+        margin-top: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $color-primary;
+        margin-bottom: 2.1rem;
+        position: relative;
+        &::before {
+          content: "";
+          border: 0.1rem solid $color-primary;
+          transform: translate(26px, 30px);
+          position: absolute;
+          width: 50%;
+        }
+      }
+    }
+  }
+  .container__button {
+    height: 23.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button__give--things {
+      font-family: $font-base;
+      font-weight: 300;
+      font-size: 3.6rem;
+      background: none;
+      color: $color-primary;
+      border: none;
+      box-shadow: none;
+      padding: 1.3rem 9.3rem;
+      border: 0.75px solid $color-primary;
+
+      &:hover {
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
