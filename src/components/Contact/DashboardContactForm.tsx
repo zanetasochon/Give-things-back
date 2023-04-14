@@ -13,13 +13,13 @@ import background from "../../assets/Background Image.png";
 import decoration from "../../assets/Decoration.png";
 
 interface IFormInputs {
-  name: string;
-  email: string;
-  text: string;
+  userName: string;
+  userEmail: string;
+  userText: string;
 }
+
 const schema = yup
-  .object()
-  .shape({
+  .object({
     userName: yup
       .string()
       .matches(/^[^\s]+$/, "Name must be a single word")
@@ -33,12 +33,12 @@ const schema = yup
   .required();
 
 export const DashboardContactForm = () => {
-  const { register, handleSubmit } = useForm<IFormInputs>();
   const { Element } = Scroll;
   const [successText, setSuccessText] = useState<string>("");
 
   const {
     control,
+    handleSubmit,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -50,13 +50,12 @@ export const DashboardContactForm = () => {
   });
 
   const onSubmit: SubmitHandler<IFormInputs> = async ({
-    name,
-    email,
-    text,
+    userName,
+    userEmail,
+    userText,
   }) => {
-    console.log(name, email, text);
     try {
-      await sendForm({ name, email, text });
+      await sendForm({ userName, userEmail, userText });
       setSuccessText("Message was sent! We`ll be in touch soon.");
     } catch (err) {
       console.log(err);
@@ -86,8 +85,7 @@ export const DashboardContactForm = () => {
                   control={control}
                   render={({ field: { onChange, value } }) => (
                     <TextField
-                      {...register("name")}
-                      id="name"
+                      id="userName"
                       label="Enter your name"
                       helperText={errors ? errors?.userName?.message : null}
                       variant="standard"
@@ -104,8 +102,7 @@ export const DashboardContactForm = () => {
                   control={control}
                   render={({ field: { onChange, value } }) => (
                     <TextField
-                      {...register("email")}
-                      id="email"
+                      id="userEmail"
                       label="Enter your e-mail"
                       helperText={errors ? errors?.userEmail?.message : null}
                       variant="standard"
@@ -123,8 +120,7 @@ export const DashboardContactForm = () => {
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <TextField
-                    {...register("text")}
-                    id="text"
+                    id="userText"
                     label="Enter your message"
                     helperText={errors ? errors?.userText?.message : null}
                     multiline
