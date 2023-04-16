@@ -1,8 +1,13 @@
 .container__section--contact {
   display: flex;
   margin-top: 9rem;
+  justify-content: flex-end;
+  align-items: center;
+
   .banner {
-    position: relative;
+    position: absolute;
+    z-index: -99999;
+    margin-top: 40rem;
     &::after {
       content: "";
       display: block;
@@ -17,13 +22,9 @@
   }
 
   .wrapper__form {
-    position: relative;
     .container__form {
-      position: absolute;
-      z-index: 999;
-      right: 15rem;
-      bottom: 50rem;
       width: 52.8rem;
+      margin-right: 14.2rem;
 
       .header__form {
         font-size: 3.8rem;

@@ -65,10 +65,11 @@ export const DashboardContactForm = () => {
 
   return (
     <section className="container__section--contact">
-      <Element name="elementContact" />
       <div className="banner">
         <img src={background} alt={background} />
       </div>
+      <Element name="elementContact" />
+
       <div className="wrapper__form">
         <div className="container__form">
           <h2 className="header__form">Contact Us</h2>

@@ -1,15 +1,36 @@
 .container__three--columns {
   position: relative;
+  max-width: 100%;
+  height: auto;
   display: flex;
 
   .container__column {
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 4.6rem;
-    margin-bottom: 8.6rem;
-    margin-left: 16.3rem;
-    margin-right: 16.3rem;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:nth-child(2) {
+      left: 25%;
+      margin-left: -143px;
+      margin-right: 143px;
+    }
+
+    &:nth-child(3) {
+      left: 45%;
+      margin-left: 143px;
+    }
+
+    &:nth-child(4) {
+      left: 85%;
+      margin-right: 143px;
+    }
+
     .head__number {
       font-weight: 300;
       font-size: 9rem;
@@ -32,8 +53,7 @@
   }
 
   .background {
-    height: 38.4rem;
-    position: absolute;
-    z-index: -999;
+    max-width: 100%;
+    height: auto;
   }
 }
