@@ -4,7 +4,7 @@ import { DashboardFourSteps } from "../../components/FourSteps/DashboardFourStep
 import { DashboardAboutUs } from "../../components/AboutUs/DashboardAboutUs";
 import { DashboardWhatWeHelp } from "../../components/WhatWeHelp/DashboardWhatWeHelp";
 import { DashboardContactForm } from "../../components/Contact/DashboardContactForm";
-import { DashboardFooter } from "../../components/Footer /DashboardFooter";
+import { DashboardFooter } from "../../components/Footer/DashboardFooter";
 import { DashboardStart } from "../../components/Start/DashboardStart";
 
 export const Dashboard = () => {
@@ -16,8 +16,10 @@ export const Dashboard = () => {
       <DashboardFourSteps />
       <DashboardAboutUs />
       <DashboardWhatWeHelp />
-      <DashboardContactForm />
-      <DashboardFooter />
+      <div>
+        <DashboardContactForm />
+        <DashboardFooter />
+      </div>
     </div>
   );
 };

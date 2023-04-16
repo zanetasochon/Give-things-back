@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import * as Scroll from "react-scroll";
 import decoration from "../../assets/Decoration.png";
 import pullover from "../../assets/Icon.png";
