@@ -2,5 +2,3 @@
   publish = "public"
   command = "npm run built"
   
-  [[plugins]]
-  package = "@netlify/plugin-forms"
