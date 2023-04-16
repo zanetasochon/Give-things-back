@@ -4,7 +4,7 @@ import { DashboardFourSteps } from "./components/FourSteps/DashboardFourSteps";
 import { DashboardAboutUs } from "./components/AboutUs/DashboardAboutUs";
 import { DashboardWhatWeHelp } from "./components/WhatWeHelp/DashboardWhatWeHelp";
 import { DashboardContactForm } from "./components/Contact/DashboardContactForm";
-import { DashboardFooter } from "./components/Footer /DashboardFooter";
+import { DashboardFooter } from "./components/Footer/DashboardFooter";
 import { DashboardStart } from "./components/Start/DashboardStart";
 import { Dashboard } from "./views/Dashboard/Dashboard";
 import { Signin } from "./views/Signin/Signin";
