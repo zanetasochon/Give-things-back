@@ -8,7 +8,7 @@ Users have items at home that they want to get rid of, but don't know how. There
 
 ## Project 
 
-Link to the app: [Give Things Back]()
+Link to the app: [Give Things Back](https://give-thing-back.netlify.app)
 
 
 ## Project Author
