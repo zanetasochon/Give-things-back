@@ -148,18 +148,6 @@ export const DashboardWhatWeHelp = () => {
     }
   };
 
-  // const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  // const id = +e.currentTarget.id
-  // if(category === "foundations") setArray(data.foundations, id)
-  // }
-
-  // const setArray = (data, e) => {
-  //   setArrayToRender([
-  //     data[e],
-  //     data[e + 1],
-  //     data[e + 2]
-  //   ])
-  // }
 
   return (
     <section className="whatWeHelp__container">
