@@ -1,8 +1,9 @@
 .container__three--columns {
   position: relative;
-  max-width: 100%;
   height: auto;
   display: flex;
+  background-color: yellow;
+  margin-top: 15rem;
 
   .container__column {
     display: flex;
@@ -10,26 +11,9 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    &:nth-child(2) {
-      left: 25%;
-      margin-left: -143px;
-      margin-right: 143px;
-    }
-
-    &:nth-child(3) {
-      left: 45%;
-      margin-left: 143px;
-    }
-
-    &:nth-child(4) {
-      left: 85%;
-      margin-right: 143px;
-    }
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    width: 100%;
 
     .head__number {
       font-weight: 300;
@@ -50,10 +34,5 @@
       width: 33.4rem;
       color: $color-primary;
     }
-  }
-
-  .background {
-    max-width: 100%;
-    height: auto;
   }
 }
