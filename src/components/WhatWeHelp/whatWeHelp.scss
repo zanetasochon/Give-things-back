@@ -28,7 +28,7 @@
       color: $color-primary;
       border: none;
       box-shadow: none;
-      border: 0.75px solid #fff;
+      border: 0.75px solid transparent;
       padding: 4.2rem 2.3rem;
 
       &:hover {
@@ -93,7 +93,7 @@
     padding: 1.5rem 1.3rem;
     margin-top: 3rem;
     margin-left: 2rem;
-    border: 0.75px solid #fff;
+    border: 0.75px solid transparent;
 
     &:hover {
       background: none;
