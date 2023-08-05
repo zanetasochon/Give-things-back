@@ -1,5 +1,5 @@
 // import { useNavigate } from "react-router-dom";
-import hero from "../../assets/Hero Image.png";
+import hero from "../../assets/Hero.png";
 import decoration from "../../assets/Decoration.png";
 import { useRoutesIfNoLog } from "../../hooks/hooks";
 

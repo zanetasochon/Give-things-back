@@ -1,6 +1,6 @@
 import * as Scroll from "react-scroll";
 import decoration from "../../assets/Decoration.png";
-import pullover from "../../assets/Icon.png";
+import pullover from "../../assets/Icon-tshirtaqz.png";
 import arrow from "../../assets/Icon-arrow.png";
 import glass from "../../assets/Icon-glass.png";
 import loop from "../../assets/Icon-loop.png";
