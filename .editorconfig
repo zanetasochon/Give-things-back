@@ -1,0 +1,19 @@
+# top-most EditorConfig file
+root = true
+
+# Format code using spaces, not tabs
+[*]
+indent_style = space
+indent_size = 2
+
+# Use LF (Unix) line endings
+[*.{js,jsx,ts,tsx,css,scss}]
+end_of_line = lf
+
+# Trim trailing whitespace
+[*.{js,jsx,ts,tsx,css,scss}]
+trim_trailing_whitespace = true
+
+# Insert a final newline at the end of the file
+[*.{js,jsx,ts,tsx,css,scss}]
+insert_final_newline = true

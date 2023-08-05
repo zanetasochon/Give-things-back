@@ -1,5 +1,5 @@
 .container__aboutUs {
-  height: 93.5rem;
+  width: 93.5rem;
   display: flex;
   .aboutUs__text {
     width: 95.8rem;
@@ -29,11 +29,10 @@
     }
     .signature__container {
       width: 65.69rem;
-      text-align: end;
+      text-align: center;
     }
   }
   .people__photo {
     width: 94.2rem;
-    height: 93.5rem;
   }
 }

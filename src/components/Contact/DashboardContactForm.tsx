@@ -9,7 +9,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { sendForm } from "../../services/form.service";
-import background from "../../assets/Background Image.png";
+import background from "../../assets/Background.png";
 import decoration from "../../assets/Decoration.png";
 
 interface IFormInputs {
