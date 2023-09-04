@@ -1,0 +1,64 @@
+@import "/src/scss/settings/variables";
+
+.container {
+    padding-left: 13.9rem;
+    padding-right: 13.9rem;
+    padding-top: 3.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 26px;
+    position: relative;
+    z-index: 999;
+}
+
+.auth {
+    display: inherit;
+    gap: 20px;
+}
+
+.hiUser {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.authButton {
+    text-decoration: none;
+    color: $color-secondary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    border: 0.75px solid #fad648;
+    padding: 9px 10px;
+
+    &:hover {
+        border-color: #fad648;
+    }
+}
+
+.nav {
+    display: inherit;
+    gap: 55px;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+
+.navButton {
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border: 0.75px solid transparent;
+    padding: 9px 10px;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #000;
+    }
+}
